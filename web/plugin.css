@@ -1,0 +1,121 @@
+.myrax-terminal-shell {
+  height: min(760px, calc(100vh - 138px));
+  min-height: 520px;
+  display: grid;
+  grid-template-rows: 52px 1fr;
+  overflow: hidden;
+  border: 1px solid #2c2c2c;
+  border-radius: 24px;
+  background: #000;
+  box-shadow: 0 18px 80px rgb(0 0 0 / 32%);
+}
+
+.myrax-terminal-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 0 16px;
+  border-bottom: 1px solid #202020;
+  color: #f5f5f5;
+  background: #080808;
+}
+
+.myrax-terminal-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.myrax-terminal-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #777;
+}
+
+.myrax-terminal-dot.is-connected {
+  background: #fff;
+}
+
+.myrax-terminal-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.myrax-terminal-button,
+.myrax-terminal-state {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #333;
+  border-radius: 999px;
+  color: #f5f5f5;
+  background: #101010;
+  font: inherit;
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.myrax-terminal-button {
+  padding: 0 12px;
+}
+
+.myrax-terminal-button:hover {
+  color: #000;
+  background: #fff;
+  border-color: #fff;
+}
+
+.myrax-terminal-state {
+  padding: 0 10px;
+  color: #a8a8a8;
+}
+
+.myrax-terminal-state.is-connected {
+  color: #000;
+  background: #fff;
+  border-color: #fff;
+}
+
+.myrax-terminal-screen {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  padding: 10px 10px 18px;
+  background: #000;
+}
+
+.myrax-terminal-screen .xterm {
+  flex: 1 1 auto;
+  width: 100%;
+  height: calc(100% - 8px);
+  padding: 0;
+}
+
+.myrax-terminal-screen .xterm-viewport,
+.myrax-terminal-screen .xterm-screen {
+  width: 100% !important;
+  height: 100% !important;
+  background: #000 !important;
+}
+
+@media (max-width: 980px) {
+  .myrax-terminal-shell {
+    height: calc(100vh - 168px);
+    min-height: 420px;
+    border-radius: 20px;
+  }
+
+  .myrax-terminal-toolbar {
+    padding: 0 12px;
+  }
+
+  .myrax-terminal-state {
+    display: none;
+  }
+}

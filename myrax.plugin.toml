@@ -1,0 +1,19 @@
+id = "terminal"
+name = "Terminal"
+version = "0.1.0"
+myrax = ">=0.1.0"
+
+[ui]
+mode = "native"
+entry = "web/plugin.js"
+styles = ["web/vendor/xterm.css", "web/plugin.css"]
+
+[runtime]
+enabled = true
+command = "/usr/local/bin/myrax"
+args = ["plugin-runtime", "terminal"]
+transport = "tcp"
+port = 0
+
+[access]
+level = "trusted"
